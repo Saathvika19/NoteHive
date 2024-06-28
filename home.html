@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script type="module" src="home.js"></script>
+</head>
+<body class="home-page">
+  <nav>
+    <h1>Notes App</h1>
+    <button id="logoutBtn">Logout</button>
+  </nav>
+  <div class="container">
+    <div class="content">
+      <div class="blog-form">
+        <h2>Add New Note</h2>
+        <input type="text" id="blogTitle" placeholder="Title">
+        <textarea id="blogContent" placeholder="Content"></textarea>
+        <button id="addBlogBtn">Add Note</button>
+      </div>
+      <div class="sort-container">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="created">Date Created</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+      <div id="blogList" class="blog-list">
+        <h2>Notes</h2>
+      </div>
+    </div>
+  </div>
+  <script src="home.js"></script>
+</body> 
+</html>
